@@ -19,16 +19,16 @@ jobs:
         displayName: Test
         inputs:
           command: test
-          arguments: -c debug -p:Altcover=true -p:AltCoverCobertura=$(Build.ArtifactStagingDirectory)/coverage.xml
-          workingDirectory: test
-          projects: '**/*.csproj'
-          publishTestResults: true
+          arguments: -c debug --logger trx --results-directory $(Agent.TempDirectory) -p:Altcover=true -p:AltCoverCobertura=$(Agent.TempDirectory)/coverage.xml
+          projects: 'test/**.csproj'
+          publishTestResults: false
+        #continueOnError: true
 
       - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
         displayName: ReportGenerator
         inputs:
-          reports: '$(Build.ArtifactStagingDirectory)/coverage.xml'
-          targetdir: '$(Build.ArtifactStagingDirectory)/coverage'
+          reports: '$(Agent.TempDirectory)/coverage.xml'
+          targetdir: '$(Agent.TempDirectory)/coverage'
           reporttypes: 'HtmlInline_AzurePipelines;Cobertura;Badges'
         enabled: false
 
@@ -36,7 +36,14 @@ jobs:
         displayName: Publish code coverage results
         inputs:
           codeCoverageTool: Cobertura
-          summaryFileLocation: $(Build.ArtifactStagingDirectory)/coverage.xml
+          summaryFileLocation: $(Agent.TempDirectory)/coverage.xml
+
+      - task: PublishTestResults@2
+        displayName: Publish test results
+        inputs:
+          failTaskOnFailedTests: true
+          testResultsFiles: $(Agent.TempDirectory)/*.trx
+          testResultsFormat: VSTest
 
       - task: MSBuild@1
         displayName: Build and package
