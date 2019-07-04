@@ -6,14 +6,14 @@ jobs:
       name: 'Hosted Windows 2019 with VS2019'
     steps:
       - script: |
-          choco install docfx
+          choco install docfx -y
         displayName: Install docfx
       
       - task: DotNetCoreCLI@2
         displayName: restore
         inputs:
           command: restore
-          workingDirectory: src        
+          projects: src/MilestoneTG.NHibernate.Extensions.sln
 
       - task: DotNetCoreCLI@2
         displayName: Test
