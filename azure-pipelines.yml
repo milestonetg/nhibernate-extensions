@@ -57,6 +57,7 @@ jobs:
           PathtoPublish:  $(Build.ArtifactStagingDirectory)
 
       - task: NuGetCommand@2
+        displayName: Publish to Nuget.org
         inputs:
           command: 'push'
           packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
