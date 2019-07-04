@@ -7,10 +7,6 @@ jobs:
     pool:
       name: 'Hosted Windows 2019 with VS2019'
     steps:
-      - script: |
-          choco install docfx -y
-        displayName: Install docfx
-      
       - task: DotNetCoreCLI@2
         displayName: restore
         inputs:
@@ -21,18 +17,10 @@ jobs:
         displayName: Test
         inputs:
           command: test
-          arguments: -c debug --no-restore --logger trx --results-directory $(Agent.TempDirectory) -p:Altcover=true -p:AltCoverCobertura=$(Agent.TempDirectory)/coverage.xml
+          arguments: -c debug --no-restore --logger trx --results-directory $(Agent.TempDirectory) -p:Altcover=true -p:AltCoverCobertura=$(Agent.TempDirectory)/coverage.xml -p:AltCoverPathFilter=test
           projects: 'test/**/*.csproj'
           publishTestResults: false
         continueOnError: true
-
-      - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
-        displayName: ReportGenerator
-        inputs:
-          reports: '$(Agent.TempDirectory)/coverage.xml'
-          targetdir: '$(Agent.TempDirectory)/coverage'
-          reporttypes: 'HtmlInline_AzurePipelines;Cobertura;Badges'
-        enabled: false
 
       - task: PublishCodeCoverageResults@1
         displayName: Publish code coverage results
@@ -56,6 +44,7 @@ jobs:
           solution: $(sln)
 
       - script: |
+          choco install docfx -y
           docfx build
         displayName: Build docs
         workingDirectory: docs
