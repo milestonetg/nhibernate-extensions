@@ -2,6 +2,8 @@ name: 1.0.$(Rev:r)
 jobs:
   - job: 
     displayName: Build
+    pool:
+      name: 'Hosted Windows 2019 with VS2019'
     steps:
       - script: |
           choco install docfx
