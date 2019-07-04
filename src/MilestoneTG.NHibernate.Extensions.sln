@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilestoneTG.NHibernate.Extensions.AspNetCore", "MilestoneTG.NHibernate.Extensions.AspNetCore\MilestoneTG.NHibernate.Extensions.AspNetCore.csproj", "{EFA12384-7760-4A38-9E52-A1791E17AD66}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilestoneTG.NHibernate.Extensions.Mapping.Attributes", "MilestoneTG.NHibernate.Extensions.Mapping.Attributes\MilestoneTG.NHibernate.Extensions.Mapping.Attributes.csproj", "{4A648EFB-D1A8-4293-B9EE-F14A4FC1D1EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MilestoneTG.NHibernate.Extensions.AspNetCore.Tests", "..\test\MilestoneTG.NHibernate.Extensions.AspNetCore.Tests\MilestoneTG.NHibernate.Extensions.AspNetCore.Tests.csproj", "{5692F3F3-ED82-4D50-B907-32103E4DF6C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFA12384-7760-4A38-9E52-A1791E17AD66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA12384-7760-4A38-9E52-A1791E17AD66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA12384-7760-4A38-9E52-A1791E17AD66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA12384-7760-4A38-9E52-A1791E17AD66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A648EFB-D1A8-4293-B9EE-F14A4FC1D1EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A648EFB-D1A8-4293-B9EE-F14A4FC1D1EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A648EFB-D1A8-4293-B9EE-F14A4FC1D1EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A648EFB-D1A8-4293-B9EE-F14A4FC1D1EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5692F3F3-ED82-4D50-B907-32103E4DF6C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5692F3F3-ED82-4D50-B907-32103E4DF6C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5692F3F3-ED82-4D50-B907-32103E4DF6C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5692F3F3-ED82-4D50-B907-32103E4DF6C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C0C54F5-4DA1-468E-8797-B97BB017669F}
+	EndGlobalSection
+EndGlobal

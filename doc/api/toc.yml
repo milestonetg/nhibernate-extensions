@@ -1,0 +1,15 @@
+### YamlMime:TableOfContent
+- uid: MilestoneTG.NHibernate.AspNetCore
+  name: MilestoneTG.NHibernate.AspNetCore
+  items:
+  - uid: MilestoneTG.NHibernate.AspNetCore.IApplicationBuilderExtensions
+    name: IApplicationBuilderExtensions
+  - uid: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions
+    name: IServiceCollectionExtensions
+  - uid: MilestoneTG.NHibernate.AspNetCore.NHibernateOptions
+    name: NHibernateOptions
+- uid: MilestoneTG.NHibernate.Mapping.Attributes
+  name: MilestoneTG.NHibernate.Mapping.Attributes
+  items:
+  - uid: MilestoneTG.NHibernate.Mapping.Attributes.ConfigurationExtensions
+    name: ConfigurationExtensions

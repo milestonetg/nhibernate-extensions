@@ -1,0 +1,19 @@
+{
+  "MilestoneTG.NHibernate.AspNetCore": "MilestoneTG.NHibernate.AspNetCore.yml",
+  "MilestoneTG.NHibernate.AspNetCore.IApplicationBuilderExtensions": "MilestoneTG.NHibernate.AspNetCore.IApplicationBuilderExtensions.yml",
+  "MilestoneTG.NHibernate.AspNetCore.IApplicationBuilderExtensions.UseNHibernate(Microsoft.AspNetCore.Builder.IApplicationBuilder)": "MilestoneTG.NHibernate.AspNetCore.IApplicationBuilderExtensions.yml",
+  "MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions": "MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.yml",
+  "MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{System.IServiceProvider,NHibernate.Cfg.Configuration},System.String[])": "MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.yml",
+  "MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String[])": "MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.yml",
+  "MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String[])": "MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.yml",
+  "MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[])": "MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.yml",
+  "MilestoneTG.NHibernate.AspNetCore.NHibernateOptions": "MilestoneTG.NHibernate.AspNetCore.NHibernateOptions.yml",
+  "MilestoneTG.NHibernate.AspNetCore.NHibernateOptions.ConnectionStringName": "MilestoneTG.NHibernate.AspNetCore.NHibernateOptions.yml",
+  "MilestoneTG.NHibernate.AspNetCore.NHibernateOptions.Properties": "MilestoneTG.NHibernate.AspNetCore.NHibernateOptions.yml",
+  "MilestoneTG.NHibernate.AspNetCore.NHibernateOptions.SECTION_NAME": "MilestoneTG.NHibernate.AspNetCore.NHibernateOptions.yml",
+  "MilestoneTG.NHibernate.Mapping.Attributes": "MilestoneTG.NHibernate.Mapping.Attributes.yml",
+  "MilestoneTG.NHibernate.Mapping.Attributes.ConfigurationExtensions": "MilestoneTG.NHibernate.Mapping.Attributes.ConfigurationExtensions.yml",
+  "MilestoneTG.NHibernate.Mapping.Attributes.ConfigurationExtensions.AddMappingAssembly(NHibernate.Cfg.Configuration,System.Reflection.Assembly)": "MilestoneTG.NHibernate.Mapping.Attributes.ConfigurationExtensions.yml",
+  "MilestoneTG.NHibernate.Mapping.Attributes.ConfigurationExtensions.AddMappingAssembly(NHibernate.Cfg.Configuration,System.Reflection.AssemblyName)": "MilestoneTG.NHibernate.Mapping.Attributes.ConfigurationExtensions.yml",
+  "MilestoneTG.NHibernate.Mapping.Attributes.ConfigurationExtensions.AddMappingAssembly(NHibernate.Cfg.Configuration,System.String)": "MilestoneTG.NHibernate.Mapping.Attributes.ConfigurationExtensions.yml"
+}

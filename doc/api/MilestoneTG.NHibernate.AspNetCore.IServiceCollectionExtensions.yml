@@ -1,0 +1,828 @@
+### YamlMime:ManagedReference
+items:
+- uid: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions
+  commentId: T:MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions
+  id: IServiceCollectionExtensions
+  parent: MilestoneTG.NHibernate.AspNetCore
+  children:
+  - MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{System.IServiceProvider,NHibernate.Cfg.Configuration},System.String[])
+  - MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String[])
+  - MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String[])
+  - MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[])
+  langs:
+  - csharp
+  - vb
+  name: IServiceCollectionExtensions
+  nameWithType: IServiceCollectionExtensions
+  fullName: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions
+  type: Class
+  source:
+    id: IServiceCollectionExtensions
+    path: C:\dev\nhibernate-aspnetcore\src\MilestoneTG.NHibernate.AspNetCore\IServiceCollectionExtensions.cs
+    startLine: 12
+  assemblies:
+  - MilestoneTG.NHibernate.AspNetCore
+  namespace: MilestoneTG.NHibernate.AspNetCore
+  summary: "\nIServiceCollection extension methods for configuring and registering NHibernate.\n"
+  example: []
+  syntax:
+    content: public static class IServiceCollectionExtensions
+    content.vb: Public Module IServiceCollectionExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[])
+  commentId: M:MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[])
+  id: AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[])
+  isExtensionMethod: true
+  parent: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddNHibernate(IServiceCollection, String[])
+  nameWithType: IServiceCollectionExtensions.AddNHibernate(IServiceCollection, String[])
+  fullName: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String[])
+  type: Method
+  source:
+    id: AddNHibernate
+    path: C:\dev\nhibernate-aspnetcore\src\MilestoneTG.NHibernate.AspNetCore\IServiceCollectionExtensions.cs
+    startLine: 58
+  assemblies:
+  - MilestoneTG.NHibernate.AspNetCore
+  namespace: MilestoneTG.NHibernate.AspNetCore
+  summary: "\nAdds NHibernate to the services collection using the default mapping file name of &quot;hibernate.hbm.xml&quot;, and\noptions defined in the NHibernate section of appSettings.json.\n"
+  example:
+  - "\n<pre><code>public class Startup\n{\n    public Startup(IConfiguration configuration)\n    {\n        Configuration = configuration;\n    }\n\n    public IConfiguration Configuration { get; }\n\n    public void ConfigureServices(IServiceCollection services)\n    {\n        services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);\n\n        services.AddNHibernate();\n    }\n\n    public void Configure(IApplicationBuilder app, IHostingEnvironment env)\n    {\n        app.UseNHibernate();\n\n        if (env.IsDevelopment())\n        {\n            app.UseDeveloperExceptionPage();\n        }\n        else\n        {\n            app.UseHsts();\n        }\n\n        app.UseHttpsRedirection();\n        app.UseMvc();\n    }\n}</code></pre>\n"
+  syntax:
+    content: public static IServiceCollection AddNHibernate(this IServiceCollection services, string[] filters = null)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The IServerCollection instance.
+    - id: filters
+      type: System.String[]
+      description: An array of global filters to enable when creating a session.
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddNHibernate(services As IServiceCollection, filters As String() = Nothing) As IServiceCollection
+  overload: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate*
+  nameWithType.vb: IServiceCollectionExtensions.AddNHibernate(IServiceCollection, String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String())
+  name.vb: AddNHibernate(IServiceCollection, String())
+- uid: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String[])
+  commentId: M:MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String[])
+  id: AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String[])
+  isExtensionMethod: true
+  parent: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddNHibernate(IServiceCollection, String, String[])
+  nameWithType: IServiceCollectionExtensions.AddNHibernate(IServiceCollection, String, String[])
+  fullName: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String, System.String[])
+  type: Method
+  source:
+    id: AddNHibernate
+    path: C:\dev\nhibernate-aspnetcore\src\MilestoneTG.NHibernate.AspNetCore\IServiceCollectionExtensions.cs
+    startLine: 108
+  assemblies:
+  - MilestoneTG.NHibernate.AspNetCore
+  namespace: MilestoneTG.NHibernate.AspNetCore
+  summary: "\nAdds NHibernate to the services collection using the mapping file provided, and\noptions defined in the NHibernate section of appSettings.json.\n"
+  example:
+  - "\n<pre><code>public class Startup\n{\n    public Startup(IConfiguration configuration)\n    {\n        Configuration = configuration;\n    }\n\n    public IConfiguration Configuration { get; }\n\n    public void ConfigureServices(IServiceCollection services)\n    {\n        services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);\n\n        services.AddNHibernate(&quot;mappings.xml&quot;);\n    }\n\n    public void Configure(IApplicationBuilder app, IHostingEnvironment env)\n    {\n        app.UseNHibernate();\n\n        if (env.IsDevelopment())\n        {\n            app.UseDeveloperExceptionPage();\n        }\n        else\n        {\n            app.UseHsts();\n        }\n\n        app.UseHttpsRedirection();\n        app.UseMvc();\n    }\n}</code></pre>\n"
+  syntax:
+    content: public static IServiceCollection AddNHibernate(this IServiceCollection services, string xmlMappingFile, string[] filters = null)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The IServerCollection instance.
+    - id: xmlMappingFile
+      type: System.String
+      description: Filename (and path) of the hibernate mapping xml file.
+    - id: filters
+      type: System.String[]
+      description: An array of global filters to enable when creating a session.
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddNHibernate(services As IServiceCollection, xmlMappingFile As String, filters As String() = Nothing) As IServiceCollection
+  overload: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate*
+  nameWithType.vb: IServiceCollectionExtensions.AddNHibernate(IServiceCollection, String, String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String, System.String())
+  name.vb: AddNHibernate(IServiceCollection, String, String())
+- uid: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String[])
+  commentId: M:MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String[])
+  id: AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.String[])
+  isExtensionMethod: true
+  parent: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddNHibernate(IServiceCollection, String, IDictionary<String, String>, String[])
+  nameWithType: IServiceCollectionExtensions.AddNHibernate(IServiceCollection, String, IDictionary<String, String>, String[])
+  fullName: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String, System.Collections.Generic.IDictionary<System.String, System.String>, System.String[])
+  type: Method
+  source:
+    id: AddNHibernate
+    path: C:\dev\nhibernate-aspnetcore\src\MilestoneTG.NHibernate.AspNetCore\IServiceCollectionExtensions.cs
+    startLine: 176
+  assemblies:
+  - MilestoneTG.NHibernate.AspNetCore
+  namespace: MilestoneTG.NHibernate.AspNetCore
+  summary: "\nAdds NHibernate to the services collection using the mapping file provided, and\nproperties provided.\n"
+  example:
+  - "\n<pre><code>public class Startup\n{\n    public Startup(IConfiguration configuration)\n    {\n        Configuration = configuration;\n    }\n\n    public IConfiguration Configuration { get; }\n\n    public void ConfigureServices(IServiceCollection services)\n    {\n        services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);\n\n        IDictionary&lt;string, string> properties = new Dictionary&lt;string, string> {\n            { &quot;connection.connection_string&quot;, &quot;Data Source=nhibernate.db;&quot; },\n            { &quot;connection.driver_class&quot;, &quot;MilestoneTG.NHibernate.Driver.Sqlite.Microsoft.MicrosoftSqliteDriver, MilestoneTG.NHibernate.Driver.Sqlite.Microsoft&quot; },\n            { &quot;dialect&quot;, &quot;NHibernate.Dialect.SQLiteDialect&quot; },\n            { &quot;hbm2ddl.keywords&quot;, &quot;auto-quote&quot;},\n            { &quot;show_sql&quot;, &quot;true&quot;},\n            { &quot;generate_statistics&quot;, &quot;true&quot;}\n        };\n        services.AddNHibernate(&quot;mappings.xml&quot;, properties);\n    }\n\n    public void Configure(IApplicationBuilder app, IHostingEnvironment env)\n    {\n        app.UseNHibernate();\n\n        if (env.IsDevelopment())\n        {\n            app.UseDeveloperExceptionPage();\n        }\n        else\n        {\n            app.UseHsts();\n        }\n\n        app.UseHttpsRedirection();\n        app.UseMvc();\n    }\n}</code></pre>\n"
+  syntax:
+    content: public static IServiceCollection AddNHibernate(this IServiceCollection services, string xmlMappingFile, IDictionary<string, string> properties, string[] filters = null)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The IServerCollection instance.
+    - id: xmlMappingFile
+      type: System.String
+      description: Filename (and path) of the hibernate mapping xml file.
+    - id: properties
+      type: System.Collections.Generic.IDictionary{System.String,System.String}
+      description: A dictionary of properties used to configure the SessionFactory
+    - id: filters
+      type: System.String[]
+      description: An array of global filters to enable when creating a session.
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddNHibernate(services As IServiceCollection, xmlMappingFile As String, properties As IDictionary(Of String, String), filters As String() = Nothing) As IServiceCollection
+  overload: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate*
+  nameWithType.vb: IServiceCollectionExtensions.AddNHibernate(IServiceCollection, String, IDictionary(Of String, String), String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String, System.Collections.Generic.IDictionary(Of System.String, System.String), System.String())
+  name.vb: AddNHibernate(IServiceCollection, String, IDictionary(Of String, String), String())
+- uid: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{System.IServiceProvider,NHibernate.Cfg.Configuration},System.String[])
+  commentId: M:MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{System.IServiceProvider,NHibernate.Cfg.Configuration},System.String[])
+  id: AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{System.IServiceProvider,NHibernate.Cfg.Configuration},System.String[])
+  isExtensionMethod: true
+  parent: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddNHibernate(IServiceCollection, Action<IServiceProvider, Configuration>, String[])
+  nameWithType: IServiceCollectionExtensions.AddNHibernate(IServiceCollection, Action<IServiceProvider, Configuration>, String[])
+  fullName: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action<System.IServiceProvider, NHibernate.Cfg.Configuration>, System.String[])
+  type: Method
+  source:
+    id: AddNHibernate
+    path: C:\dev\nhibernate-aspnetcore\src\MilestoneTG.NHibernate.AspNetCore\IServiceCollectionExtensions.cs
+    startLine: 242
+  assemblies:
+  - MilestoneTG.NHibernate.AspNetCore
+  namespace: MilestoneTG.NHibernate.AspNetCore
+  summary: "\nAdds NHibernate to the services collection using the configuration delegate provided.\n"
+  example:
+  - "\n<pre><code>public class Startup\n{\n    public Startup(IConfiguration configuration)\n    {\n        Configuration = configuration;\n    }\n\n    public IConfiguration Configuration { get; }\n\n    public void ConfigureServices(IServiceCollection services)\n    {\n        services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);\n\n        services.AddNHibernate((provider, config)=>{\n            IDictionary&lt;string, string> properties = new Dictionary&lt;string, string> {\n                { &quot;connection.connection_string&quot;, &quot;Data Source=nhibernate.db;&quot; },\n                { &quot;connection.driver_class&quot;, &quot;MilestoneTG.NHibernate.Driver.Sqlite.Microsoft.MicrosoftSqliteDriver, MilestoneTG.NHibernate.Driver.Sqlite.Microsoft&quot; },\n                { &quot;dialect&quot;, &quot;NHibernate.Dialect.SQLiteDialect&quot; },\n                { &quot;hbm2ddl.keywords&quot;, &quot;auto-quote&quot;},\n                { &quot;show_sql&quot;, &quot;true&quot;},\n                { &quot;generate_statistics&quot;, &quot;true&quot;}\n            };\n\n            config.AddProperties(properties);\n            config.AddXmlFile(&quot;mappings.xml&quot;);\n        });\n    }\n\n    public void Configure(IApplicationBuilder app, IHostingEnvironment env)\n    {\n        app.UseNHibernate();\n\n        if (env.IsDevelopment())\n        {\n            app.UseDeveloperExceptionPage();\n        }\n        else\n        {\n            app.UseHsts();\n        }\n\n        app.UseHttpsRedirection();\n        app.UseMvc();\n    }\n}</code></pre>\n"
+  syntax:
+    content: public static IServiceCollection AddNHibernate(this IServiceCollection services, Action<IServiceProvider, Configuration> configure, string[] filters = null)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The IServerCollection instance.
+    - id: configure
+      type: System.Action{System.IServiceProvider,NHibernate.Cfg.Configuration}
+      description: An action delegate used to configure the session factory.
+    - id: filters
+      type: System.String[]
+      description: An array of global filters to enable when creating a session.
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddNHibernate(services As IServiceCollection, configure As Action(Of IServiceProvider, Configuration), filters As String() = Nothing) As IServiceCollection
+  overload: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate*
+  nameWithType.vb: IServiceCollectionExtensions.AddNHibernate(IServiceCollection, Action(Of IServiceProvider, Configuration), String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Action(Of System.IServiceProvider, NHibernate.Cfg.Configuration), System.String())
+  name.vb: AddNHibernate(IServiceCollection, Action(Of IServiceProvider, Configuration), String())
+references:
+- uid: MilestoneTG.NHibernate.AspNetCore
+  commentId: N:MilestoneTG.NHibernate.AspNetCore
+  name: MilestoneTG.NHibernate.AspNetCore
+  nameWithType: MilestoneTG.NHibernate.AspNetCore
+  fullName: MilestoneTG.NHibernate.AspNetCore
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate*
+  commentId: Overload:MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate
+  name: AddNHibernate
+  nameWithType: IServiceCollectionExtensions.AddNHibernate
+  fullName: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions.AddNHibernate
+- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
+  parent: Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Microsoft.Extensions.DependencyInjection
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  name: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IDictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.IDictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  name: IDictionary<String, String>
+  nameWithType: IDictionary<String, String>
+  fullName: System.Collections.Generic.IDictionary<System.String, System.String>
+  nameWithType.vb: IDictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.IDictionary(Of System.String, System.String)
+  name.vb: IDictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Action{System.IServiceProvider,NHibernate.Cfg.Configuration}
+  commentId: T:System.Action{System.IServiceProvider,NHibernate.Cfg.Configuration}
+  parent: System
+  definition: System.Action`2
+  name: Action<IServiceProvider, Configuration>
+  nameWithType: Action<IServiceProvider, Configuration>
+  fullName: System.Action<System.IServiceProvider, NHibernate.Cfg.Configuration>
+  nameWithType.vb: Action(Of IServiceProvider, Configuration)
+  fullName.vb: System.Action(Of System.IServiceProvider, NHibernate.Cfg.Configuration)
+  name.vb: Action(Of IServiceProvider, Configuration)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    nameWithType: IServiceProvider
+    fullName: System.IServiceProvider
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: NHibernate.Cfg.Configuration
+    name: Configuration
+    nameWithType: Configuration
+    fullName: NHibernate.Cfg.Configuration
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.IServiceProvider
+    name: IServiceProvider
+    nameWithType: IServiceProvider
+    fullName: System.IServiceProvider
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: NHibernate.Cfg.Configuration
+    name: Configuration
+    nameWithType: Configuration
+    fullName: NHibernate.Cfg.Configuration
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action`2
+  commentId: T:System.Action`2
+  isExternal: true
+  name: Action<T1, T2>
+  nameWithType: Action<T1, T2>
+  fullName: System.Action<T1, T2>
+  nameWithType.vb: Action(Of T1, T2)
+  fullName.vb: System.Action(Of T1, T2)
+  name.vb: Action(Of T1, T2)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: )
+    nameWithType: )
+    fullName: )

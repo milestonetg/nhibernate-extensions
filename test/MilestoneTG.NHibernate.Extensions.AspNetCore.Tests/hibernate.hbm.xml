@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Generated from NHibernate.Mapping.Attributes on 2019-07-01 14:21:10Z.-->
+<hibernate-mapping namespace="MilestoneTG.NHibernate.AspNetCore.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" assembly="MilestoneTG.NHibernate.AspNetCore.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns="urn:nhibernate-mapping-2.2">
+  <class table="foo" schema="HR" optimistic-lock="version" name="MilestoneTG.NHibernate.AspNetCore.Tests.Foo, MilestoneTG.NHibernate.AspNetCore.Tests">
+    <id name="Id" column="id" type="Int64">
+      <generator class="identity" />
+    </id>
+    <version name="Version" column="version_number" type="Int64" />
+    <property name="Bar" column="bar" type="Int64"/>
+    <bag name="MyClassList" lazy="true" fetch="select">
+      <key column="foo_id" />
+      <one-to-many class="MilestoneTG.NHibernate.AspNetCore.Tests.MyClass, MilestoneTG.NHibernate.AspNetCore.Tests" not-found="ignore" />
+    </bag>
+  </class>
+  <class table="my_table" schema="HR" optimistic-lock="version" name="MilestoneTG.NHibernate.AspNetCore.Tests.MyClass, MilestoneTG.NHibernate.AspNetCore.Tests">
+    <id name="Id" column="id" type="Int64">
+      <generator class="identity" />
+    </id>
+    <version name="Version" column="version_number" type="Int64" />
+    <property name="Bar" column="bar" type="Int64" />
+  </class>
+</hibernate-mapping>

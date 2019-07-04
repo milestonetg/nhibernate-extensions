@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net35</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <PackageReference Include="NHibernate" Version="5.1.0" />
+    <PackageReference Include="NHibernate.Mapping.Attributes" Version="5.1.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)'=='net35'">
+    <PackageReference Include="NHibernate" Version="3.2.0.4000" />
+    <PackageReference Include="NHibernate.Mapping.Attributes" Version="3.2.0" />
+  </ItemGroup>
+</Project>

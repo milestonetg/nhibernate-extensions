@@ -1,0 +1,61 @@
+name: 1.0.$(Rev:r)
+jobs:
+  - job: 
+    displayName: Build
+    steps:
+      - script: |
+          choco install docfx
+        displayName: Install docfx
+      
+      - task: DotNetCoreCLI@2
+        displayName: restore
+        inputs:
+          command: restore
+          workingDirectory: src        
+
+      - task: DotNetCoreCLI@2
+        displayName: Test
+        inputs:
+          command: test
+          arguments: -c debug -p:Altcover=true -p:AltCoverCobertura=$(Build.ArtifactStagingDirectory)/coverage.xml
+          workingDirectory: test
+          projects: '**/*.csproj'
+          publishTestResults: true
+
+      - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
+        displayName: ReportGenerator
+        inputs:
+          reports: '$(Build.ArtifactStagingDirectory)/coverage.xml'
+          targetdir: '$(Build.ArtifactStagingDirectory)/coverage'
+          reporttypes: 'HtmlInline_AzurePipelines;Cobertura;Badges'
+        enabled: false
+
+      - task: PublishCodeCoverageResults@1
+        displayName: Publish code coverage results
+        inputs:
+          codeCoverageTool: Cobertura
+          summaryFileLocation: $(Build.ArtifactStagingDirectory)/coverage.xml
+
+      - task: MSBuild@1
+        displayName: Build and package
+        inputs:
+          msbuildArguments: /t:pack /p:Version=$(Build.Number) /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)
+          configuration: release
+          platform: any cpu
+          solution: src/MilestoneTG.NHibernate.AspNetCore.sln
+
+      - script: |
+          docfx build
+        displayName: Build docs
+        workingDirectory: docs
+
+      - task: PublishBuildArtifacts@1
+        displayName: Publish build artifacts
+        inputs:
+          ArtifactName: drop
+          PathtoPublish:  $(Build.ArtifactStagingDirectory)
+
+      
+      
+
+      

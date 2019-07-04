@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: MilestoneTG.NHibernate.Mapping.Attributes
+  commentId: N:MilestoneTG.NHibernate.Mapping.Attributes
+  id: MilestoneTG.NHibernate.Mapping.Attributes
+  children:
+  - MilestoneTG.NHibernate.Mapping.Attributes.ConfigurationExtensions
+  langs:
+  - csharp
+  - vb
+  name: MilestoneTG.NHibernate.Mapping.Attributes
+  nameWithType: MilestoneTG.NHibernate.Mapping.Attributes
+  fullName: MilestoneTG.NHibernate.Mapping.Attributes
+  type: Namespace
+  assemblies:
+  - MilestoneTG.NHibernate.Mapping.Attributes
+references:
+- uid: MilestoneTG.NHibernate.Mapping.Attributes.ConfigurationExtensions
+  commentId: T:MilestoneTG.NHibernate.Mapping.Attributes.ConfigurationExtensions
+  name: ConfigurationExtensions
+  nameWithType: ConfigurationExtensions
+  fullName: MilestoneTG.NHibernate.Mapping.Attributes.ConfigurationExtensions

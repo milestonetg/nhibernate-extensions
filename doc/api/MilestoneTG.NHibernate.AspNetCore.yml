@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: MilestoneTG.NHibernate.AspNetCore
+  commentId: N:MilestoneTG.NHibernate.AspNetCore
+  id: MilestoneTG.NHibernate.AspNetCore
+  children:
+  - MilestoneTG.NHibernate.AspNetCore.IApplicationBuilderExtensions
+  - MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions
+  - MilestoneTG.NHibernate.AspNetCore.NHibernateOptions
+  langs:
+  - csharp
+  - vb
+  name: MilestoneTG.NHibernate.AspNetCore
+  nameWithType: MilestoneTG.NHibernate.AspNetCore
+  fullName: MilestoneTG.NHibernate.AspNetCore
+  type: Namespace
+  assemblies:
+  - MilestoneTG.NHibernate.AspNetCore
+references:
+- uid: MilestoneTG.NHibernate.AspNetCore.IApplicationBuilderExtensions
+  commentId: T:MilestoneTG.NHibernate.AspNetCore.IApplicationBuilderExtensions
+  name: IApplicationBuilderExtensions
+  nameWithType: IApplicationBuilderExtensions
+  fullName: MilestoneTG.NHibernate.AspNetCore.IApplicationBuilderExtensions
+- uid: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions
+  commentId: T:MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions
+  name: IServiceCollectionExtensions
+  nameWithType: IServiceCollectionExtensions
+  fullName: MilestoneTG.NHibernate.AspNetCore.IServiceCollectionExtensions
+- uid: MilestoneTG.NHibernate.AspNetCore.NHibernateOptions
+  commentId: T:MilestoneTG.NHibernate.AspNetCore.NHibernateOptions
+  name: NHibernateOptions
+  nameWithType: NHibernateOptions
+  fullName: MilestoneTG.NHibernate.AspNetCore.NHibernateOptions
