@@ -1,4 +1,6 @@
 name: 1.0.$(Rev:r)
+variables:
+  sln: 'src/MilestoneTG.NHibernate.Extensions.sln'
 jobs:
   - job: 
     displayName: Build
@@ -13,14 +15,14 @@ jobs:
         displayName: restore
         inputs:
           command: restore
-          projects: src/MilestoneTG.NHibernate.Extensions.sln
+          projects: $(sln)
 
       - task: DotNetCoreCLI@2
         displayName: Test
         inputs:
           command: test
-          arguments: -c debug --logger trx --results-directory $(Agent.TempDirectory) -p:Altcover=true -p:AltCoverCobertura=$(Agent.TempDirectory)/coverage.xml
-          projects: 'test/**.csproj'
+          arguments: -c debug --no-restore --logger trx --results-directory $(Agent.TempDirectory) -p:Altcover=true -p:AltCoverCobertura=$(Agent.TempDirectory)/coverage.xml
+          projects: 'test/**/*.csproj'
           publishTestResults: false
         #continueOnError: true
 
@@ -48,10 +50,10 @@ jobs:
       - task: MSBuild@1
         displayName: Build and package
         inputs:
-          msbuildArguments: /t:pack /p:Version=$(Build.Number) /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)
+          msbuildArguments: /t:pack /p:Version=$(Build.BuildNumber) /p:PackageOutputPath=$(Build.ArtifactStagingDirectory)
           configuration: release
           platform: any cpu
-          solution: src/MilestoneTG.NHibernate.AspNetCore.sln
+          solution: $(sln)
 
       - script: |
           docfx build
