@@ -49,14 +49,16 @@ jobs:
         displayName: Build docs
         workingDirectory: doc
         enabled: false
-
+        
       - task: PublishBuildArtifacts@1
         displayName: Publish build artifacts
         inputs:
           ArtifactName: drop
           PathtoPublish:  $(Build.ArtifactStagingDirectory)
 
-      
-      
-
-      
+      - task: NuGetCommand@2
+        inputs:
+          command: 'push'
+          packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+          nuGetFeedType: 'external'
+          publishFeedCredentials: 'Milestonetg-NuGet'
