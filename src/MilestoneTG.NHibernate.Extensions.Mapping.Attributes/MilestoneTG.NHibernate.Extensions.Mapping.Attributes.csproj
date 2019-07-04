@@ -3,6 +3,13 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net35</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Description>Extensions for using Mapping Attribures with NHibernate.</Description>
+    <Authors>jpenniman</Authors>
+    <Company>Milestone Technology Group, LLC</Company>
+    <Authors>jpenniman</Authors>
+    <PackageProjectUrl>https://github.com/milestonetg/nhibernate-extensions</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/milestonetg/nhibernate-extensions/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageTags>NHibernate AspNetCore</PackageTags>    
   </PropertyGroup>
   
   <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">

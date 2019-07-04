@@ -6,6 +6,9 @@ using System.Reflection;
 
 namespace MilestoneTG.NHibernate.Mapping.Attributes
 {
+    /// <summary>
+    /// Extension methods for NHibernate.Cfg.Configuration
+    /// </summary>
     public static class ConfigurationExtensions
     {
         /// <summary>
@@ -47,7 +50,7 @@ namespace MilestoneTG.NHibernate.Mapping.Attributes
         /// Adds a mapping using an assembly containing classes decorated with NHibernate.Mapping.Attributes.
         /// </summary>
         /// <param name="configuration"></param>
-        /// <param name="mappedAssemblyName">The name of of the assembly.</param>
+        /// <param name="mappedAssembly">The name of of the assembly.</param>
         /// <returns></returns>
         public static Configuration AddMappingAssembly(this Configuration configuration, Assembly mappedAssembly)
         {

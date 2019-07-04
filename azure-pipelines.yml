@@ -47,7 +47,8 @@ jobs:
           choco install docfx -y
           docfx build
         displayName: Build docs
-        workingDirectory: docs
+        workingDirectory: doc
+        enabled: false
 
       - task: PublishBuildArtifacts@1
         displayName: Publish build artifacts
