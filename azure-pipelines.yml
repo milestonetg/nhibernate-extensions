@@ -24,7 +24,7 @@ jobs:
           arguments: -c debug --no-restore --logger trx --results-directory $(Agent.TempDirectory) -p:Altcover=true -p:AltCoverCobertura=$(Agent.TempDirectory)/coverage.xml
           projects: 'test/**/*.csproj'
           publishTestResults: false
-        #continueOnError: true
+        continueOnError: true
 
       - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@4
         displayName: ReportGenerator
