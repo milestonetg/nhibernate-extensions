@@ -1,11 +1,14 @@
 # NHibernate Extensions
 
 [![Build Status](https://milestonetg.visualstudio.com/Milestone/_apis/build/status/nhibernate-extensions?branchName=master)](https://milestonetg.visualstudio.com/Milestone/_build/latest?definitionId=35&branchName=master)
-
+ ![GitHub](https://img.shields.io/github/license/milestonetg/nhibernate-extensions.svg)
 
 ## Packages
 
 ### MilestoneTG.NHibernate.Extensions.AspNetCore
+
+![Nuget](https://img.shields.io/nuget/v/MilestoneTG.NHibernate.Extensions.AspNetCore.svg)
+![Nuget](https://img.shields.io/nuget/dt/MilestoneTG.NHibernate.Extensions.AspNetCore.svg)
 
 Configuration classes and DI extensions for configuring NHibernate in an Asp.Net Core application.
 
@@ -67,6 +70,9 @@ services.AddNHibernate((provider, config)=>{
 ```
 
 ### MilestoneTG.NHibernate.Extensions.Mapping.Attributes
+
+![Nuget](https://img.shields.io/nuget/v/MilestoneTG.NHibernate.Extensions.Mapping.Attributes.svg)
+![Nuget](https://img.shields.io/nuget/dt/MilestoneTG.NHibernate.Extensions.Mapping.Attributes.svg)
 
 Configuration extensions for configuring NHibernate with NHibernate.Mapping.Attributes.
 
